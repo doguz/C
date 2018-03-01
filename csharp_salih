@@ -1,0 +1,44 @@
+using System;
+
+namespace salih_console
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Hafızada yas değişkeni için string tutacak yer ayırdık
+            String yas = "25";
+            int degisken = 0;
+
+            //Kullanıcıdan yaşını girmesini istedik
+            Console.WriteLine("Yaşınız nedir");
+
+            //konsoldan ReadLine ile okuduğumuz string değeri yas değişkenin içine koyduk
+            yas = Console.ReadLine();
+
+            //sayısal kontrol yapacağımız için yas değişkeninin string türünü int 32 ye çevirdik
+            degisken = Convert.ToInt32(yas);
+
+
+            if ( degisken >= 18)
+            {
+                Console.WriteLine("askere gidebilir");
+                Console.ReadKey();
+            }
+
+            if (degisken < 18)
+            {
+                Console.WriteLine("askere gidemez");
+                Console.ReadKey();
+            }
+        }
+    }
+}
+
+/*
+ yaşı 18 den büyükse askere gidebilir,18 den küçükse askere gidemez ?
+
+Yaşınız nedir 
+    Yaşımı söyliyeceğim 
+    yaşınız 18 den küçük oldugu için gidemez yada 18 den büyük ise askere gidebilir
+*/
